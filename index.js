@@ -1,6 +1,3 @@
-
-
-
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Contutorialuctor OO pattern?',
@@ -14,10 +11,5 @@ const tutorials = [
   'what is JSONP?'
 ];
 
- const titleCased = tutorials.map(function (tutorial) {
-   tutorial = tutorial.split(' ');
-   for (var i = 0; i < tutorial.length; i++) {
-     tutorial[i] = tutorial[i].charAt(0).toUpperCase() + tutorial[i].slice(1);
-   }
-   return tutorial.join(' ');
- });
+// yup just one line :D
+const titleCased = () => tutorials.map(string => string.split(' ').map(word => word.toLowerCase().charAt(0).toUpperCase() + word.slice(1)).join(' '))
